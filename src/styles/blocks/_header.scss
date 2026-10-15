@@ -1,0 +1,140 @@
+.header {
+    width: 100%;
+    min-width: 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header__top {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+
+    width: 100%;
+    min-height: 83px;
+    padding: 15px 30px 15px 32px;
+    box-sizing: border-box;
+}
+
+.header .search {
+    position: static;
+    flex: 0 1 798px;
+    width: 798px;
+    min-width: 0;
+    max-width: 798px;
+    height: 53px;
+    margin: 0 24px 0 0;
+}
+
+.header__profile {
+    position: absolute;
+    top: -60px;
+    right: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+
+    width: 84px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    border-radius: 0;
+    background: transparent;
+}
+
+.header__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+    background: #eeeeee;
+    color: #171717;
+}
+
+.header__username {
+    flex: 1;
+    min-width: 0;
+
+    color: #171717;
+    font-family: "Actor", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 12px;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+.header__chevron {
+    flex-shrink: 0;
+    color: #fc6d3e;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.header__mobile-tabs {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .header__top {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        min-height: 0;
+        height: 0;
+        padding: 0 16px;
+
+        position: static;
+    }
+
+    .header .search {
+        display: none;
+    }
+
+    .header__profile {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 6px;
+
+        width: 84px;
+        height: 25px;
+        margin: 0;
+        padding: 0;
+
+        background: transparent;
+    }
+
+    .header__avatar {
+        width: 25px;
+        height: 25px;
+    }
+
+    .header__username {
+        flex: 1;
+        min-width: 0;
+        font-size: 11px;
+        text-align: left;
+    }
+
+    .header__chevron {
+        display: none;
+    }
+
+    .header__mobile-tabs {
+        display: none;
+    }
+}

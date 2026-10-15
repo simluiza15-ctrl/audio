@@ -1,0 +1,88 @@
+.track-list {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 1074px;
+    min-height: 736px;
+    margin-top: 24px;
+}
+
+.track-list__header {
+    display: grid;
+    grid-template-columns:
+        40px 60px minmax(0, 1fr) 262px 195px 44px 56px 43px;
+
+    align-items: center;
+
+    width: 100%;
+    min-height: 32px;
+    padding: 0;
+
+    color: #aaaaaa;
+    font-family: "Actor", Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+
+.track-list__number {
+    grid-column: 1;
+    padding-left: 10px;
+}
+
+.track-list__name {
+    grid-column: 3;
+    padding-left: 8px;
+}
+
+.track-list__album {
+    grid-column: 4;
+    padding-left: 8px;
+}
+
+.track-list__date {
+    grid-column: 5;
+    padding-left: 8px;
+}
+
+.track-list__favorite {
+    grid-column: 6;
+    text-align: center;
+}
+
+.track-list__duration {
+    grid-column: 7;
+    text-align: center;
+}
+
+.track-list__menu {
+    grid-column: 8;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .track-list {
+        width: 100%;
+        max-width: 100%;
+        min-height: 0;
+        margin-top: 12px;
+        box-sizing: border-box;
+    }
+
+    .track-list__header {
+        display: none;
+    }
+
+    .track-list__number,
+    .track-list__name,
+    .track-list__album,
+    .track-list__date,
+    .track-list__favorite,
+    .track-list__duration,
+    .track-list__menu {
+        min-width: 0;
+    }
+}
