@@ -1,0 +1,273 @@
+.player {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100px;
+    min-height: 100px;
+    box-sizing: border-box;
+
+    z-index: 100;
+
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr) 180px;
+    align-items: center;
+    gap: 32px;
+
+    padding: 10px 32px;
+
+    background: #ffffff;
+    border-top: 1px solid #e5e5e5;
+}
+
+.player__track {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-width: 0;
+}
+
+.player__cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 60px;
+    height: 60px;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+
+    color: #ffffff;
+
+    font-size: 24px;
+}
+
+.player__info {
+    min-width: 0;
+}
+
+.player__title {
+    overflow: hidden;
+
+    margin-bottom: 5px;
+
+    color: #222222;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.player__artist {
+    overflow: hidden;
+
+    color: #aaaaaa;
+
+    font-size: 12px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.player__controls {
+    min-width: 0;
+}
+
+.player__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    margin-bottom: 6px;
+}
+
+.player__button,
+.player__play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #aaaaaa;
+
+    cursor: pointer;
+}
+
+.player__button {
+    width: 24px;
+    height: 24px;
+
+    font-size: 14px;
+}
+
+.player__button:hover {
+    color: #222222;
+}
+
+.player__play {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #aaaaaa;
+
+    color: #ffffff;
+
+    font-size: 16px;
+}
+
+.player__play:hover {
+    background: #777777;
+}
+
+.player__progress {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.player__time {
+    flex-shrink: 0;
+
+    color: #999999;
+
+    font-size: 10px;
+}
+
+.player__range,
+.player__volume-range {
+    width: 100%;
+
+    cursor: pointer;
+
+    accent-color: #ff6845;
+}
+
+.player__volume {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.player__volume-icon {
+    font-size: 14px;
+}
+
+.player__volume-range {
+    width: 90px;
+}
+
+@media (max-width: 767px) {
+    .player {
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 40px;
+        grid-template-rows: auto auto;
+        align-items: center;
+        gap: 8px 10px;
+
+        width: 100%;
+        height: auto;
+        min-height: 88px;
+        padding: 10px 16px;
+
+        box-sizing: border-box;
+        background: #ffffff;
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .player__track {
+        grid-column: 1;
+        grid-row: 1;
+        gap: 10px;
+        min-width: 0;
+    }
+
+    .player__cover {
+        width: 48px;
+        height: 48px;
+    }
+
+    .player__cover img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .player__info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .player__title {
+        margin-bottom: 4px;
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .player__artist {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .player__controls {
+        display: contents;
+    }
+
+    .player__buttons {
+        grid-column: 2;
+        grid-row: 1;
+        justify-content: flex-end;
+        margin-bottom: 0;
+    }
+
+    .player__button {
+        display: none;
+    }
+
+    .player__play {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .player__progress {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        gap: 8px;
+        min-width: 0;
+    }
+
+    .player__time {
+        font-size: 9px;
+    }
+
+    .player__range {
+        min-width: 0;
+        margin: 0;
+    }
+
+    .player__volume {
+        display: none;
+    }
+}
